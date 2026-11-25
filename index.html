@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MH Events Management</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <a href="#" class="logo">MH</a>
+    <div class="company-name">MH EVENTS MANAGEMENT</div>
+</nav>
+
+<!-- Main Banner -->
+<section class="hero">
+
+    <div class="hero-content">
+        <p class="small-title">WELCOME TO</p>
+
+        <h1>MH Events Management</h1>
+
+        <h2>Every Love Story Deserves a
+            Beautiful Celebration.</h2>
+
+        <p class="description">
+            Creating timeless celebrations,
+            turning dreams into memories,
+            and making every moment magical.
+        </p>
+
+        <a href="#registration" class="hero-button">
+            REGISTER YOUR EVENT
+        </a>
+    </div>
+
+</section>
+
+<!-- About Section -->
+<section class="about">
+
+    <p class="tagline">LOVE • JOY • CELEBRATION</p>
+
+    <h2>Making Your Special Day Memorable</h2>
+
+    <p>
+        MH Events Management brings your dream wedding
+        to life with beautiful decorations, elegant
+        arrangements and unforgettable celebrations.
+    </p>
+
+</section>
+
+<!-- Wedding Gallery -->
+<section class="gallery">
+
+    <h2>Our Wedding Inspiration</h2>
+
+    <div class="gallery-container">
+
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=85"
+        alt="Elegant wedding decoration">
+
+        <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=900&q=85"
+        alt="Wedding table decoration">
+
+        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=85"
+        alt="Wedding ceremony">
+
+    </div>
+
+</section>
+
+<!-- Registration Form -->
+<section class="registration" id="registration">
+
+    <div class="form-heading">
+        <p class="tagline">LET US MAKE IT SPECIAL</p>
+        <h2>Wedding Event Registration</h2>
+        <p>Fill in your details to register your wedding event.</p>
+    </div>
+
+    <form id="weddingForm">
+
+        <h3>01. Couple Details</h3>
+
+        <div class="form-grid">
+
+            <label>Bride's Name
+                <input type="text" name="bride"
+                placeholder="Enter bride's name" required>
+            </label>
+
+            <label>Groom's Name
+                <input type="text" name="groom"
+                placeholder="Enter groom's name" required>
+            </label>
+
+            <label>Wedding Date
+                <input type="date" name="date" required>
+            </label>
+
+            <label>Wedding Venue
+                <input type="text" name="venue"
+                placeholder="Enter wedding venue" required>
+            </label>
+
+        </div>
+
+        <h3>02. Contact Details</h3>
+
+        <div class="form-grid">
+
+            <label>Bride's Contact Number
+                <input type="tel" name="bridePhone"
+                placeholder="Enter mobile number"
+                pattern="[0-9]{10}" maxlength="10" required>
+            </label>
+
+            <label>Groom's Contact Number
+                <input type="tel" name="groomPhone"
+                placeholder="Enter mobile number"
+                pattern="[0-9]{10}" maxlength="10" required>
+            </label>
+
+            <label class="full">Email Address
+                <input type="email" name="email"
+                placeholder="Enter email address" required>
+            </label>
+
+        </div>
+
+        <h3>03. Guest Details</h3>
+
+        <div class="form-grid">
+
+            <label>Number of Guests
+                <input type="number" name="guests"
+                placeholder="Enter guest count"
+                min="1" required>
+            </label>
+
+            <label>Meal Arrangement
+                <select name="meal" required>
+                    <option value="">Select meal arrangement</option>
+                    <option>Buffet System</option>
+                    <option>Vegetarian</option>
+                    <option>Non-Vegetarian</option>
+                </select>
+            </label>
+
+            <label class="full">Special Requests
+                <textarea name="requests"
+                placeholder="Enter your requests"></textarea>
+            </label>
+
+        </div>
+
+        <div class="buttons">
+
+            <button type="submit" class="submit-btn">
+                Submit Registration
+            </button>
+
+            <button type="reset" class="reset-btn">
+                Reset Form
+            </button>
+
+        </div>
+
+    </form>
+
+</section>
+
+<!-- Footer -->
+<footer>
+
+    <div class="footer-logo">MH</div>
+
+    <h2>MH EVENTS MANAGEMENT</h2>
+
+    <p>
+        Every Love Story Deserves a Beautiful Celebration.
+    </p>
+
+    <p class="copyright">
+        © 2026 MH Events Management. All Rights Reserved.
+    </p>
+
+</footer>
+
+<script>
+document.getElementById("weddingForm")
+.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    if (this.checkValidity()) {
+        alert("Registration Submitted Successfully!");
+    } else {
+        this.reportValidity();
+    }
+
+});
+</script>
+
+</body>
+</html>
+

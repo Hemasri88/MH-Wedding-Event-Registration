@@ -1,0 +1,379 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fff7f8;
+    color: #684852;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 8%;
+    background: #f9e5e9;
+}
+
+.logo {
+    font-family: 'Great Vibes', cursive;
+    font-size: 55px;
+    color: #a75f78;
+    text-decoration: none;
+}
+
+.company-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #8f5269;
+}
+
+/* Hero Section */
+
+.hero {
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background:
+    linear-gradient(
+        rgba(75, 36, 50, 0.35),
+        rgba(75, 36, 50, 0.35)
+    ),
+    url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+    padding: 40px 20px;
+}
+
+.hero-content {
+    max-width: 750px;
+    color: white;
+}
+
+.small-title {
+    font-size: 13px;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(45px, 7vw, 75px);
+    color: #ffe1e9;
+}
+
+.hero h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+.description {
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 30px;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 14px 30px;
+    background: #d68ca5;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    letter-spacing: 2px;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background: #a85f79;
+    transform: translateY(-3px);
+}
+
+/* About Section */
+
+.about {
+    text-align: center;
+    padding: 75px 15%;
+    background: #fff0f2;
+}
+
+.tagline {
+    color: #bc8295;
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.about h2,
+.gallery h2,
+.form-heading h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 38px;
+    color: #985d73;
+    margin-bottom: 20px;
+}
+
+.about p:last-child {
+    max-width: 700px;
+    margin: auto;
+    line-height: 2;
+    color: #846a72;
+    font-size: 14px;
+}
+
+/* Gallery */
+
+.gallery {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 5px solid white;
+    box-shadow: 0 8px 20px rgba(125, 75, 90, 0.12);
+    transition: 0.4s;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.04);
+}
+
+/* Registration Section */
+
+.registration {
+    padding: 75px 8%;
+    background: linear-gradient(
+        135deg,
+        #fbe5eb,
+        #fff5f5,
+        #f6e0e7
+    );
+}
+
+.form-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.form-heading p:last-child {
+    color: #896d76;
+    font-size: 14px;
+}
+
+/* Form */
+
+form {
+    max-width: 850px;
+    margin: auto;
+    padding: 40px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px
+    rgba(150, 82, 111, 0.12);
+}
+
+form h3 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #a45e78;
+    font-size: 25px;
+    margin: 25px 0 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0d5dd;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 13px;
+    color: #765661;
+}
+
+.full {
+    grid-column: 1 / -1;
+}
+
+/* Input Fields */
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #e6c4cf;
+    border-radius: 10px;
+    background: #fffafb;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #bd7d94;
+    box-shadow: 0 0 8px #f1c6d4;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+/* Buttons */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 35px;
+}
+
+button {
+    padding: 14px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.submit-btn {
+    background: #b86f88;
+    color: white;
+}
+
+.reset-btn {
+    background: #f5dce4;
+    color: #875267;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px
+    rgba(100, 55, 75, 0.18);
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 40px 15px;
+    background: #f2dce3;
+}
+
+.footer-logo {
+    font-family: 'Great Vibes', cursive;
+    font-size: 65px;
+    color: #a45e78;
+}
+
+footer h2 {
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 3px;
+    font-size: 22px;
+    color: #875267;
+}
+
+footer p {
+    margin-top: 12px;
+    color: #906c79;
+    font-size: 13px;
+}
+
+.copyright {
+    font-size: 11px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .company-name {
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-container img {
+        height: 260px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full {
+        grid-column: auto;
+    }
+
+    form {
+        padding: 22px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .about {
+        padding: 55px 8%;
+    }
+}
+
